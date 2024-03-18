@@ -3,13 +3,25 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+
+    <!-- Font awesome 5 -->
+    <link href="{% static 'style/fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
+
+    <!-- custom style -->
+    <link href="{% static 'style/css/ui.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'style/css/responsive.css' %}" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+    <!-- Font awesome 5 -->
+    <link href="{% static 'style/fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-
+        {% block content %}
+        {% endblock %}
 </body>
-<script src=""></script>
+<script type="text/javascript">{% block script %}{% endblock script %}</script>
+<script src="{% static 'js/dist/bundle.js' %}"></script>
 </html>

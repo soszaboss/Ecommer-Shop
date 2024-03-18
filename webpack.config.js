@@ -4,7 +4,7 @@ module.exports = {
     entry: './assets/scripts/index.js',
     output: {
         filename: "bundle.js",
-        path: path.resolve(__dirname, 'static', 'js')
+        path: path.resolve(__dirname, 'static', 'js', 'dist')
     },
     module: {
         rules: [
